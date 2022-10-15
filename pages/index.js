@@ -4,9 +4,15 @@ import {
   AiFillTwitterCircle, 
   AiFillLinkedin,
   AiFillYoutube,
+  AiFillGithub,
+  AiFillMail,
 } from "react-icons/ai";
 import Image from "next/image";
 import lao from "../public/lao-tech.jpg";
+import tpl from "../public/tpl-log.jpg";
+import ed from "../public/ed-app.jpg";
+import weather from "../public/weather.jpg";
+import inventory from "../public/inventory.jpg";
 
 export default function Home() {
   return (
@@ -34,28 +40,34 @@ export default function Home() {
             <h2 className="text-5xl py-2 text-cyan-700 font-medium">
               Luis Olivero
             </h2>
-            <h3 className="text-2xl py-2">React App Developer</h3>
+            <h3 className="text-2xl py-2">React Application Developer</h3>
             <p className="text-md py-5 leading-8 text-gray-800">
-              Creating software applications for everyday problems, no matter the field! 
+              Creating software applications for everyday problems, no matter the field! 3PL Logistics, Educational, Local Weather, Inventory Apps to take organizations to their fullest potential! 
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-16 py-3 text-cyan-600">
-            <AiFillTwitterCircle />
+          {/* Replace Twitter for Github, Linkedin good, Replace Youtube for Email */}
+          <div className="text-5xl flex justify-center gap-16 pt-3 pb-12 text-cyan-600">
+            <AiFillGithub />
             <AiFillLinkedin />
-            <AiFillYoutube />
+            <AiFillMail />
           </div>
-          <div className="relative mx-auto w-80 h-80">
+          {/* Change image to square of 4 to represent fields listed above */}
+          {/* <div className="relative mx-auto w-80 h-80">
             <Image src={lao} layout="fill" objectFit="cover" />
+          </div> */}
+          <div className="columns-2 mx-auto pb-12 w-50 h-50">
+            <Image src={ed} objectFit="cover"/>
+            <Image src={tpl} />
+            <Image src={weather} />
+            <Image src={inventory} />
           </div>
         </section>
         
         <section>
-          <div>
-            <h3 className="text-3xl py-1">Services</h3>
-            <p>
-              
-            </p>
+          <div className="bg-gradient-to-b from-gray-500 to-cyan-500 text-white text-center min-h-screen">
+            <h3 className="text-5xl py-3">Future Projects</h3>
           </div>
+
         </section>
       </main>
     </div>
